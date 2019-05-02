@@ -26,10 +26,10 @@ action "Send Default Message" {
   ]
 }
 
-action "Send Photo Message" {
+action "Send Gopher Message" {
   uses = "appleboy/facebook-action@master"
   env = {
-    PHOTO = "tests/github.png"
+    PHOTO = "tests/gophercolor.png"
   }
   secrets = [
     "FB_PAGE_TOKEN",
