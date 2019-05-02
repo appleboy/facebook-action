@@ -2,7 +2,7 @@
 
 [GitHub Action](https://developer.github.com/actions/) for sending a Facebook notification message.
 
-<img src="./images/facebook-notification.png">
+<img src="./images/facebook-message.png">
 
 ## Usage
 
