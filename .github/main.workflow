@@ -29,7 +29,7 @@ action "Send Default Message" {
 action "Send Gopher Message" {
   uses = "appleboy/facebook-action@master"
   env = {
-    PHOTOS = "tests/gophercolor.png"
+    PHOTOS = "https://golang.org/doc/gopher/gophercolor.png"
   }
   secrets = [
     "FB_PAGE_TOKEN",
