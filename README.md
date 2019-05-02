@@ -54,7 +54,7 @@ action "Send photo message" {
     "FB_TO",
   ]
   env = {
-    PHOTOS = "tests/github.png"
+    IMAGES = "https://golang.org/doc/gopher/gophercolor.png"
   }
   args = "A new commit has been pushed."
 }
