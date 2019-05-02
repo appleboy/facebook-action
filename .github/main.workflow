@@ -3,7 +3,7 @@ workflow "Send Notification" {
   resolves = [
     "Send Custom Message",
     "Send Default Message",
-    "Send Photo Message",
+    "Send Gopher Message",
   ]
 }
 
