@@ -67,6 +67,7 @@ Getting started with [Facebook Message Platform](https://developers.facebook.com
 * `FB_PAGE_TOKEN`: The token that is used to verify the page on facebook (required).
 * `FB_VERIFY_TOKEN`: The token used to verify facebook (required).
 * `FB_TO`: Recipient is who the message was sent to (required).
+* `APP_SECRET`: The app secret from the facebook developer portal.
 
 ## Template variable
 
