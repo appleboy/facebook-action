@@ -64,8 +64,8 @@ action "Send photo message" {
 
 Getting started with [Facebook Message Platform](https://developers.facebook.com/docs/messenger-platform/).
 
-* `FB_PAGE_TOKEN`: The token that is used to verify the page on facebook (required).
-* `FB_VERIFY_TOKEN`: The token used to verify facebook (required).
+* `FB_PAGE_TOKEN`: Token is the access token of the Facebook page to send messages from..
+* `FB_VERIFY_TOKEN`: The token used to verify facebook.
 * `FB_TO`: Recipient is who the message was sent to (required).
 * `APP_SECRET`: The app secret from the facebook developer portal.
 
