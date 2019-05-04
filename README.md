@@ -41,7 +41,6 @@ action "Send Default Message" {
 * AUDIOS - Optional. audio message
 * VIDEOS - Optional. video message
 * FILES - Optional. file message
-* DEBUG - Optional. enable debug mode
 
 ### Example
 
@@ -68,6 +67,7 @@ Getting started with [Facebook Message Platform](https://developers.facebook.com
 * `FB_VERIFY_TOKEN`: The token used to verify facebook.
 * `FB_TO`: Recipient is who the message was sent to (required).
 * `APP_SECRET`: The app secret from the facebook developer portal.
+* `FB_VERIFY`: verifying webhooks on the Facebook Developer Portal.
 
 ## Template variable
 
