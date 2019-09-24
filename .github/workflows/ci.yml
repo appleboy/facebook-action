@@ -1,4 +1,4 @@
-name: Go
+name: facebook message
 on: [push]
 jobs:
 
@@ -15,3 +15,10 @@ jobs:
         FB_TO: ${{ secrets.FB_TO }}
       with:
         args: The ${{ github.event_name }} event triggered this step.
+
+    - name: send default message
+      uses: appleboy/facebook-action@master
+      env:
+        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
+        FB_TO: ${{ secrets.FB_TO }}

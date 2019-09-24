@@ -8,29 +8,35 @@
 
 Send custom message and see the custom variable as blow.
 
-```
-action "Send Custom Message" {
-  uses = "appleboy/facebook-action@master"
-  secrets = [
-    "FB_PAGE_TOKEN",
-    "FB_VERIFY_TOKEN",
-    "FB_TO",
-  ]
-  args = "A new commit has been pushed. commit sha: {{ commit.sha }}"
-}
+```yml
+name: facebook message
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: send custom message
+      uses: appleboy/facebook-action@master
+      env:
+        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
+        FB_TO: ${{ secrets.FB_TO }}
+      with:
+        args: The ${{ github.event_name }} event triggered this step.
 ```
 
 Remove `args` to send the default message.
 
-```
-action "Send Default Message" {
-  uses = "appleboy/facebook-action@master"
-  secrets = [
-    "FB_PAGE_TOKEN",
-    "FB_VERIFY_TOKEN",
-    "FB_TO",
-  ]
-}
+```yml
+- name: send default message
+  uses: appleboy/facebook-action@master
+  env:
+    FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+    FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
+    FB_TO: ${{ secrets.FB_TO }}
 ```
 
 ![facebook-workflow](./images/facebook-workflow.png)
