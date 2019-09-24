@@ -1,0 +1,13 @@
+name: Go
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: send custom message
+      uses: appleboy/facebook-action@master
+      with:
+        args: The ${{ github.event_name }} event triggered this step.
