@@ -31,4 +31,3 @@ jobs:
         FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
         FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
         FB_TO: ${{ secrets.FB_TO }}
-        GITHUB: true
