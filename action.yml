@@ -1,4 +1,4 @@
-name: 'Facebook Notify'
+name: 'Facebook Message Notify'
 description: 'Sending a Facebook message'
 author: 'Bo-Yi Wu'
 inputs:
