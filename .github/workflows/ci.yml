@@ -31,3 +31,13 @@ jobs:
         FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
         FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
         FB_TO: ${{ secrets.FB_TO }}
+
+    - name: send gopher image message
+      uses: appleboy/facebook-action@master
+      with:
+        message: send photo message
+        images: "https://golang.org/doc/gopher/gophercolor.png"
+      env:
+        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
+        FB_TO: ${{ secrets.FB_TO }}
