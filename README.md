@@ -41,12 +41,12 @@ Remove `args` to send the default message.
 
 ![facebook-workflow](./images/facebook-workflow.png)
 
-## Environment variables
+## Input variables
 
-* IMAGES - Optional. photo message
-* AUDIOS - Optional. audio message
-* VIDEOS - Optional. video message
-* FILES - Optional. file message
+* images - Optional. photo message
+* audios - Optional. audio message
+* videos - Optional. video message
+* files - Optional. file message
 
 ### Example
 

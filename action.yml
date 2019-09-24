@@ -1,0 +1,19 @@
+name: 'Facebook Notify'
+description: 'Sending a Facebook message'
+author: 'Bo-Yi Wu'
+inputs:
+  images:
+    description: 'send the image message. Ex: https://golang.org/doc/gopher/gophercolor.png'
+  audios:
+    description: 'send the audio message.'
+  files:
+    description: 'send the file message.'
+  videos:
+    description: 'send the video message.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'message-square'
+  color: 'blue'
