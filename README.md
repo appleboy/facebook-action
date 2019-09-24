@@ -2,7 +2,7 @@
 
 [GitHub Action](https://developer.github.com/actions/) for sending a Facebook notification message.
 
-<img src="./images/facebook-message.png">
+![facebook-message](./images/facebook-message.png)
 
 ## Usage
 
@@ -33,7 +33,7 @@ action "Send Default Message" {
 }
 ```
 
-<img src="images/facebook-workflow.png">
+![facebook-workflow](./images/facebook-workflow.png)
 
 ## Environment variables
 
