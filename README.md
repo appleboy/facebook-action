@@ -4,6 +4,8 @@
 
 ![facebook-message](./images/facebook-message.png)
 
+[![Actions Status](https://github.com/appleboy/facebook-action/workflows/facebook%20message/badge.svg)](https://github.com/appleboy/facebook-action/actions)
+
 ## Usage
 
 Send custom message and see the custom variable as blow.
