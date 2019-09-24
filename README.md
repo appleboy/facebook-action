@@ -50,19 +50,16 @@ Remove `args` to send the default message.
 
 ### Example
 
-```
-action "Send photo message" {
-  uses = "appleboy/facebook-action@master"
-  secrets = [
-    "FB_PAGE_TOKEN",
-    "FB_VERIFY_TOKEN",
-    "FB_TO",
-  ]
-  env = {
-    IMAGES = "https://golang.org/doc/gopher/gophercolor.png"
-  }
-  args = "A new commit has been pushed."
-}
+```yml
+- name: send gopher image message
+  uses: appleboy/facebook-action@master
+  with:
+    message: send photo message
+    images: "https://golang.org/doc/gopher/gophercolor.png"
+  env:
+    FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+    FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
+    FB_TO: ${{ secrets.FB_TO }}
 ```
 
 ## Secrets
@@ -77,7 +74,7 @@ Getting started with [Facebook Message Platform](https://developers.facebook.com
 
 ## Template variable
 
-| Github Variable   | Telegram Template Variable |
+| Github Variable   | facebook Template Variable |
 |-------------------|----------------------------|
 | GITHUB_REPOSITORY | repo                       |
 | GITHUB_ACTOR      | repo.namespace             |

@@ -1,4 +1,4 @@
-FROM appleboy/drone-facebook
+FROM appleboy/drone-facebook:1.5.3-linux-amd64
 
 # Github labels
 LABEL "com.github.actions.name"="Facebook Notify"
