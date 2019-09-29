@@ -9,35 +9,32 @@ jobs:
 
     - name: send custom message
       uses: appleboy/facebook-action@master
-      env:
-        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-        FB_TO: ${{ secrets.FB_TO }}
       with:
+        fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+        fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+        to: ${{ secrets.FB_TO }}
         args: The ${{ github.event_name }} event triggered first step.
 
     - name: send message useing with
       uses: appleboy/facebook-action@master
-      env:
-        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-        FB_TO: ${{ secrets.FB_TO }}
       with:
+        fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+        fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+        to: ${{ secrets.FB_TO }}
         message: The ${{ github.event_name }} event triggered second step.
 
     - name: send default message
       uses: appleboy/facebook-action@master
-      env:
-        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-        FB_TO: ${{ secrets.FB_TO }}
+      with:
+        fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+        fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+        to: ${{ secrets.FB_TO }}
 
     - name: send gopher image message
       uses: appleboy/facebook-action@master
       with:
+        fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+        fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+        to: ${{ secrets.FB_TO }}
         message: send photo message
         images: "https://golang.org/doc/gopher/gophercolor.png"
-      env:
-        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-        FB_TO: ${{ secrets.FB_TO }}
