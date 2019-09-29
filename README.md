@@ -22,12 +22,11 @@ jobs:
 
     - name: send custom message
       uses: appleboy/facebook-action@master
-      env:
-        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-        FB_TO: ${{ secrets.FB_TO }}
       with:
-        args: The ${{ github.event_name }} event triggered this step.
+        fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+        fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+        to: ${{ secrets.FB_TO }}
+        args: The ${{ github.event_name }} event triggered first step.
 ```
 
 Remove `args` to send the default message.
@@ -35,16 +34,23 @@ Remove `args` to send the default message.
 ```yml
 - name: send default message
   uses: appleboy/facebook-action@master
-  env:
-    FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-    FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-    FB_TO: ${{ secrets.FB_TO }}
+  with:
+    fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+    fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+    to: ${{ secrets.FB_TO }}
 ```
 
 ![facebook-workflow](./images/facebook-workflow.png)
 
 ## Input variables
 
+Getting started with [Facebook Message Platform](https://developers.facebook.com/docs/messenger-platform/).
+
+* fb_page_token: Token is the access token of the Facebook page to send messages from..
+* fb_verify_token: The token used to verify facebook.
+* to: Recipient is who the message was sent to (required).
+* app_secret: The app secret from the facebook developer portal.
+* verify: verifying webhooks on the Facebook Developer Portal.
 * images - Optional. photo message
 * audios - Optional. audio message
 * videos - Optional. video message
@@ -56,23 +62,12 @@ Remove `args` to send the default message.
 - name: send gopher image message
   uses: appleboy/facebook-action@master
   with:
+    fb_page_token: ${{ secrets.FB_PAGE_TOKEN }}
+    fb_verify_token: ${{ secrets.FB_VERIFY_TOKEN }}
+    to: ${{ secrets.FB_TO }}
     message: send photo message
     images: "https://golang.org/doc/gopher/gophercolor.png"
-  env:
-    FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-    FB_VERIFY_TOKEN: ${{ secrets.FB_VERIFY_TOKEN }}
-    FB_TO: ${{ secrets.FB_TO }}
 ```
-
-## Secrets
-
-Getting started with [Facebook Message Platform](https://developers.facebook.com/docs/messenger-platform/).
-
-* `FB_PAGE_TOKEN`: Token is the access token of the Facebook page to send messages from..
-* `FB_VERIFY_TOKEN`: The token used to verify facebook.
-* `FB_TO`: Recipient is who the message was sent to (required).
-* `APP_SECRET`: The app secret from the facebook developer portal.
-* `FB_VERIFY`: verifying webhooks on the Facebook Developer Portal.
 
 ## Template variable
 

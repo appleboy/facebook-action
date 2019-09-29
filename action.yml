@@ -2,6 +2,16 @@ name: 'Facebook Message Notify'
 description: 'Sending a Facebook message'
 author: 'Bo-Yi Wu'
 inputs:
+  fb_page_token:
+    description: 'Token is the access token of the Facebook page to send messages from..'
+  fb_verify_token:
+    description: 'The token used to verify facebook.'
+  to:
+    description: 'Recipient is who the message was sent to (required).'
+  app_secret:
+    description: 'The app secret from the facebook developer portal.'
+  verify:
+    description: 'verifying webhooks on the Facebook Developer Portal.'
   images:
     description: 'send the image message. Ex: https://golang.org/doc/gopher/gophercolor.png'
   audios:
