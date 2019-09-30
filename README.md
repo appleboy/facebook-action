@@ -1,6 +1,6 @@
 # 🚀 Facebook Notify for GitHub Actions
 
-[GitHub Action](https://developer.github.com/actions/) for sending a Facebook notification message.
+[GitHub Action](https://github.com/features/actions) for sending a Facebook notification message.
 
 ![facebook-message](./images/facebook-message.png)
 
